@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+   <title>{{ title }}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="static/stylesheets/base.css">
+	<link rel="stylesheet" href="static/stylesheets/skeleton.css">
+	<link rel="stylesheet" href="static/stylesheets/layout.css">
+	<link rel="stylesheet" href="static/stylesheets/mystyles.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="static/images/favicon.ico">
+	<link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="static/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="static/images/apple-touch-icon-114x114.png">
+
+   <style type="text/css">
+      h1 {
+         text-align: center;
+      }
+
+      h4 {
+         padding: 0.3em
+      }
+
+      p.entry {
+         vertical-align: middle;
+         padding: 0.25em 1em;
+         padding-right: 0.5em;
+         margin: 0em;
+      }
+
+      hr {
+         margin: 0em 0em;
+         margin-bottom: 0.5em;
+      }
+
+      section {
+         min-height: 20em;
+      }
+
+      b {
+         font-weight: bold;
+      }
+
+      .hil {
+         background: hsl(60, 25%, 98%);
+      }
+   </style>
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+   <h1>My Links</h1>
+	<div class="container">
+      {% for column in columns %}
+         <section class="one-third column">
+         {% for title, link, sep, blog_title,img in column %}
+         {% if blog_title %}<h4>{%else%}<p class='entry {{ loop.cycle('','hil') }}'>{%endif%}
+            <a href="{{url_for('ope', url=link)}}">{{title}}</a>
+            {% if blog_title %}</h4>{%else%}<p>{%endif%}
+            {% if sep %}<hr />
+            {% endif %}
+         {% endfor %}
+         </section>
+      {% endfor %}
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
+
