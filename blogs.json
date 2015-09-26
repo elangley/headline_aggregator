@@ -1,15 +1,13 @@
 [
-	"http://thomism.wordpress.com/feed/",
-	"http://www.adashofbitters.com/feed/",
+	"https://drmeister.wordpress.com/feed/rss",
 	"http://feeds.feedburner.com/jlongster",
-	"http://americandrink.net/rss",
-	"http://www.cocktailnerd.com/feed/",
-	"http://melissamccart.tumblr.com/rss",
 	"http://xkcd.com/rss.xml",
 	"http://www.reddit.com/r/roguelikes/",
 	"http://www.reddit.com/r/roguelikedev/",
 	"http://www.reddit.com/r/programming/",
 	"http://www.reddit.com/r/dcss/",
-	"http://www.reddit.com/r/nethack/",
-	"http://www.reddit.com/r/python/"
+	"http://www.reddit.com/r/lisp/",
+	"http://www.reddit.com/r/scheme/",
+	"http://www.reddit.com/r/haskell/",
+   "http://www.reddit.com/r/prolog/"
 ]
